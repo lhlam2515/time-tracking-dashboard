@@ -17,8 +17,8 @@
 
   --text-display: 400 1.5rem/1.175 var(--font-family);
   --text-headline: 300 1.25rem/1.4 var(--font-family);
-  --text-title: 500 1.125rem/1.25 var(--font-family);
-  --text-body: 400 1rem/1.5 var(--font-family);
+  --text-title: 500 1.125rem/1.5 var(--font-family);
+  --text-body: 400 1.125rem/1.5 var(--font-family);
   --text-label: 300 1rem/1.5 var(--font-family);
 
   --spacing-100: 0.5rem;
