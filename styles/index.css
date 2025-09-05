@@ -106,11 +106,6 @@ body {
   background-position: top right 5%;
 }
 
-.activity-card__content:hover {
-  background-color: var(--color-purple-500);
-  cursor: pointer;
-}
-
 .activity-card__content {
   display: flex;
   padding: var(--spacing-300) var(--spacing-300) var(--spacing-400);
@@ -118,6 +113,11 @@ body {
   background-color: var(--color-navy-900);
   border-radius: 1rem;
   gap: var(--spacing-100);
+}
+
+.activity-card__content:hover {
+  background-color: var(--color-purple-500);
+  cursor: pointer;
 }
 
 .activity-card__header {
