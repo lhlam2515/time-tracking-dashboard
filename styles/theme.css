@@ -15,11 +15,11 @@
   --color-purple-500: hsl(235, 45%, 61%);
   --color-navy-200: hsl(236, 100%, 87%);
 
-  --text-display: 400 1.5rem/1.175 var(--font-family);
-  --text-headline: 300 1.25rem/1.4 var(--font-family);
+  --text-display: 300 2.25rem/1.2 var(--font-family);
+  --text-headline: 300 1.5rem/1.5 var(--font-family);
   --text-title: 500 1.125rem/1.5 var(--font-family);
   --text-body: 400 1.125rem/1.5 var(--font-family);
-  --text-label: 300 1rem/1.5 var(--font-family);
+  --text-label: 400 1rem/1.5 var(--font-family);
 
   --spacing-100: 0.5rem;
   --spacing-200: 1rem;
