@@ -91,7 +91,7 @@ body {
   display: grid;
   width: 100%;
   grid-template-rows: 1fr;
-  grid-template-rows: repeat(6, minmax(180px, 1fr));
+  grid-template-rows: repeat(6, minmax(12.5rem, 1fr));
   gap: var(--spacing-300);
 }
 
