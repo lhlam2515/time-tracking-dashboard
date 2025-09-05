@@ -1,6 +1,8 @@
 const timeframeSelector = document.getElementById("timeframe-selector");
 
 timeframeSelector.addEventListener("click", async ({ target }) => {
+  if (!target.classList.contains("timeframe-button")) return;
+
   const data = await fetch("./data.json").then((res) => res.json());
   const previousLabels = {
     daily: "Yesterday",
