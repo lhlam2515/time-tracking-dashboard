@@ -145,32 +145,32 @@ body {
   font: var(--text-label);
 }
 
-.work {
+#work {
   background-color: var(--color-orange-300);
   background-image: url("../images/icon-work.svg");
 }
 
-.play {
+#play {
   background-color: var(--color-blue-300);
   background-image: url("../images/icon-play.svg");
 }
 
-.study {
+#study {
   background-color: var(--color-pink-400);
   background-image: url("../images/icon-study.svg");
 }
 
-.exercise {
+#exercise {
   background-color: var(--color-green-400);
   background-image: url("../images/icon-exercise.svg");
 }
 
-.social {
+#social {
   background-color: var(--color-purple-700);
   background-image: url("../images/icon-social.svg");
 }
 
-.self-care {
+#self-care {
   background-color: var(--color-yellow-300);
   background-image: url("../images/icon-self-care.svg");
 }
