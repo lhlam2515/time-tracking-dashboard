@@ -168,3 +168,87 @@ body {
   background-color: var(--color-yellow-300);
   background-image: url("../images/icon-self-care.svg");
 }
+
+@media (min-width: 40rem) {
+  .container {
+    max-width: none;
+  }
+  .user-card {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-300);
+  }
+
+  .user-info {
+    flex: 1 1 50%;
+    align-self: stretch;
+  }
+
+  .timeframe-selector {
+    flex: 1 1 50%;
+    padding-inline: var(--spacing-300);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-200);
+  }
+
+  .activity-cards {
+    flex: 1 1 80%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, minmax(12.5rem, 1fr));
+    gap: var(--spacing-400);
+  }
+}
+
+@media (min-width: 64rem) {
+  .container {
+    display: grid;
+    max-width: 68rem;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .user-card {
+    flex: 1 1 30%;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 0;
+  }
+
+  .user-info {
+    flex: 1 1 70%;
+    padding-block: var(--spacing-300) var(--spacing-900);
+    padding-inline: var(--spacing-500);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-500);
+  }
+
+  .user-info img {
+    width: 5rem;
+    height: 5rem;
+    border: 0.1875rem solid white;
+  }
+
+  .timeframe-selector {
+    flex: 1 1 30%;
+    padding: var(--spacing-300);
+    align-self: stretch;
+  }
+
+  .activity-cards {
+    flex: 1 1 70%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax(15rem, 1fr));
+    gap: var(--spacing-400);
+  }
+
+  .activity-card__content {
+    gap: var(--spacing-300);
+  }
+
+  .activity-card__body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
