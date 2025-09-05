@@ -1,2 +1,170 @@
 @import url("./base.css");
 @import url("./theme.css");
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--font-family);
+  background-color: var(--color-navy-950);
+  color: white;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 20rem;
+  padding-block: var(--spacing-900);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-300);
+}
+
+.user-card {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  border-radius: 1rem;
+  background-color: var(--color-navy-900);
+}
+
+.user-info {
+  display: flex;
+  width: 100%;
+  padding: var(--spacing-300) 0;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-300);
+
+  border-radius: 1rem;
+  background-color: var(--color-purple-600);
+  color: white;
+}
+
+.user-info img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.report-for {
+  display: flex;
+  flex-direction: column;
+}
+
+.report-for p {
+  color: var(--color-navy-200);
+  font: var(--text-label);
+}
+
+.report-for h2 {
+  font: var(--text-headline);
+}
+
+.timeframe-selector {
+  display: flex;
+  padding: var(--spacing-300) 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeframe-button {
+  flex: 1;
+  background-color: none;
+  color: var(--color-purple-500);
+  font: var(--text-body);
+}
+
+.timeframe-button.active,
+.timeframe-button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.activity-cards {
+  display: grid;
+  width: 100%;
+  grid-template-rows: 1fr;
+  grid-template-rows: repeat(6, minmax(180px, 1fr));
+  gap: var(--spacing-300);
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  background-position: top right 5%;
+}
+
+.activity-card__content {
+  display: flex;
+  padding: var(--spacing-300) var(--spacing-300) var(--spacing-400);
+  flex-direction: column;
+  background-color: var(--color-navy-900);
+  border-radius: 1rem;
+  gap: var(--spacing-100);
+}
+
+.activity-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity-card h3 {
+  font: var(--text-title);
+}
+
+.activity-card__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current-hours {
+  font: var(--text-display);
+}
+
+.previous-hours {
+  color: var(--color-navy-200);
+  font: var(--text-label);
+}
+
+.work {
+  background-color: var(--color-orange-300);
+  background-image: url("../images/icon-work.svg");
+}
+
+.play {
+  background-color: var(--color-blue-300);
+  background-image: url("../images/icon-play.svg");
+}
+
+.study {
+  background-color: var(--color-pink-400);
+  background-image: url("../images/icon-study.svg");
+}
+
+.exercise {
+  background-color: var(--color-green-400);
+  background-image: url("../images/icon-exercise.svg");
+}
+
+.social {
+  background-color: var(--color-purple-700);
+  background-image: url("../images/icon-social.svg");
+}
+
+.self-care {
+  background-color: var(--color-yellow-300);
+  background-image: url("../images/icon-self-care.svg");
+}
