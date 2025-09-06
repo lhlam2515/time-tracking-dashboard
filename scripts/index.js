@@ -23,19 +23,17 @@ const updateActivityCard = (title, timeframes, target) => {
 timeframeSelector.addEventListener("click", async ({ target }) => {
   if (!target.classList.contains("timeframe-button")) return;
 
-  const data = await fetch("./data.json").then((res) => res.json());
+  // Toggle active button state
+  timeframeSelector.querySelectorAll(".timeframe-button").forEach((btn) => {
+    btn.classList.remove("active");
+    btn.setAttribute("aria-selected", "false");
+  });
+  target.classList.add("active");
+  target.setAttribute("aria-selected", "true");
 
+  // Load + update cards
+  const data = await loadData();
   data.forEach(({ title, timeframes }) =>
     updateActivityCard(title, timeframes, target.id)
   );
-});
-
-timeframeSelector.addEventListener("click", ({ target, currentTarget }) => {
-  if (!target.classList.contains("timeframe-button")) return;
-
-  currentTarget.querySelectorAll(".timeframe-button").forEach((btn) => {
-    btn.classList.remove("active");
-  });
-
-  target.classList.add("active");
 });
