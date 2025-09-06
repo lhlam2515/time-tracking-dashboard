@@ -1,20 +1,23 @@
 const timeframeSelector = document.getElementById("timeframe-selector");
 
+const previousLabels = {
+  daily: "Yesterday",
+  weekly: "Last Week",
+  monthly: "Last Month",
+};
+
 const updateActivityCard = (title, timeframes, target) => {
   const activityCard = document.getElementById(
     title.toLowerCase().replace(/\s+/g, "-")
   );
+  if (!activityCard) return; // Guard clause if mismatch
+
   const currentHours = activityCard.querySelector(".current-hours");
   const previousHours = activityCard.querySelector(".previous-hours");
 
-  const previousLabels = {
-    daily: "Yesterday",
-    weekly: "Last Week",
-    monthly: "Last Month",
-  };
-
-  currentHours.textContent = `${timeframes[target].current}hrs`;
-  previousHours.textContent = `${previousLabels[target]} - ${timeframes[target].previous}hrs`;
+  const { current, previous } = timeframes[target];
+  currentHours.textContent = `${current}hrs`;
+  previousHours.textContent = `${previousLabels[target]} - ${previous}hrs`;
 };
 
 timeframeSelector.addEventListener("click", async ({ target }) => {
