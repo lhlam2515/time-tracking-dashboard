@@ -2,7 +2,7 @@ const timeframeSelector = document.getElementById("timeframe-selector");
 
 const updateActivityCard = (title, timeframes, target) => {
   const activityCard = document.getElementById(
-    title.toLowerCase().replace(" ", "-")
+    title.toLowerCase().replace(/\s+/g, "-")
   );
   const currentHours = activityCard.querySelector(".current-hours");
   const previousHours = activityCard.querySelector(".previous-hours");
